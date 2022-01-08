@@ -4,16 +4,16 @@ type: docker
 name: default
 
 environment:
-  - HE_USERNAME:
-      from_secret: HE_USERNAME
-  - HE_PASSWORD:
-      from_secret: HE_PASSWORD
-  - HE_TOTPKEY:
-      from_secret: HE_TOTPKEY
-  - CF_APITOKEN:
-      from_secret: CF_APITOKEN
-  - CF_ACCOUNTID:
-      from_secret: CF_ACCOUNTID
+  HE_USERNAME:
+    from_secret: HE_USERNAME
+  HE_PASSWORD:
+    from_secret: HE_PASSWORD
+  HE_TOTPKEY:
+    from_secret: HE_TOTPKEY
+  CF_APITOKEN:
+    from_secret: CF_APITOKEN
+  CF_ACCOUNTID:
+    from_secret: CF_ACCOUNTID
 
 image_pull_secrets:
 - IMAGE_PULL_SECRET
