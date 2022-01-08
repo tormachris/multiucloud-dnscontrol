@@ -15,13 +15,18 @@ environment:
   - CF_ACCOUNTID:
       from_secret: CF_ACCOUNTID
 
+image_pull_secrets:
+- IMAGE_PULL_SECRET
+
 steps:
 - name: Validate configuration and check changes
-  image: stackexchange/dnscontrol
+  image: registry.kmlabz.com/stargate-cluster/dnscontrol-docker
+  pull: always
   commands:
     - dnscontrol preview
 
 - name: Push new configuration to providers
-  image: stackexchange/dnscontrol
+  image: registry.kmlabz.com/stargate-cluster/dnscontrol-docker
+  pull: always
   commands:
     - dnscontrol push
