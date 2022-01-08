@@ -21,7 +21,7 @@ steps:
 - name: Validate configuration and check changes
   image: stackexchange/dnscontrol
   commands:
-    - echo teszt
+    - echo $teszt
     - dnscontrol preview
 
 - name: Push new configuration to providers
