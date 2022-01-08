@@ -1,7 +1,7 @@
 var cloudflare = NewDnsProvider("cloudflare", "CLOUDFLAREAPI");
 var hedns = NewDnsProvider("hedns", "HEDNS");
-var REG_CHANGEME = NewRegistrar("ThirdParty", "NONE");
-D("kmlabz.com", REG_CHANGEME,
+var REG_MONITOR = NewRegistrar('DNS-over-HTTPS', 'DNSOVERHTTPS');
+D("kmlabz.com", REG_MONITOR,
         DnsProvider(hedns),
         NS('aws', 'ns-799.awsdns-35.net.', TTL(86400)),
         NS('aws', 'ns-1168.awsdns-18.org.', TTL(86400)),
@@ -49,8 +49,8 @@ D("kmlabz.com", REG_CHANGEME,
         TXT('@', 'google-site-verification=cg0LE20BEX78s7fbbuYmDxslaHxJTVra5vBFehxsujk'),
         TXT('@', 'v=spf1 include:u3682008.wl009.sendgrid.net -all', TTL(3600)),
         TXT('_dmarc', 'v=DMARC1; p=reject; pct=25; rua=mailto:tormakristof@tormakristof.eu.;')
-)
-D("tormakristof.eu", REG_CHANGEME,
+);
+D("tormakristof.eu", REG_MONITOR,
         DnsProvider(cloudflare),
         A('apache', '152.66.211.211'),
         A('mckay', '152.66.211.215'),
@@ -97,8 +97,8 @@ D("tormakristof.eu", REG_CHANGEME,
         TXT('_dmarc', 'v=DMARC1; p=reject;'),
         TXT('@', 'google-site-verification=Y-vwKAKqpWiBNB7ETL6HweEmt2sE38kzEwm87t5rBAQ'),
         TXT('@', 'v=spf1 include:spf.protection.outlook.com -all')
-)
-D("torma.xyz", REG_CHANGEME,
+);
+D("torma.xyz", REG_MONITOR,
         DnsProvider(hedns),
         DefaultTTL(3600),
         A('@', '152.66.211.211', TTL(300)),
@@ -108,8 +108,8 @@ D("torma.xyz", REG_CHANGEME,
         CNAME('sig1._domainkey', 'sig1.dkim.torma.xyz.at.icloudmailadmin.com.'),
         TXT('@', 'v=spf1 redirect=icloud.com'),
         TXT('@', 'apple-domain=h0Mjsp5TEdNbSNRa')
-)
-D("tormakris.dev", REG_CHANGEME,
+);
+D("tormakris.dev", REG_MONITOR,
         DnsProvider(hedns),
         DefaultTTL(3600),
         A('@', '152.66.211.211', TTL(300)),
@@ -128,9 +128,9 @@ D("tormakris.dev", REG_CHANGEME,
         TXT('@', 'v=spf1 include:_spf.google.com -all'),
         TXT('@', 'google-site-verification=j5a9N2rIead4e3h5baJd1o3xrl7f5n_U82nDfgrZi9I', TTL(300)),
         TXT('_dmarc', 'v=DMARC1; p=reject;')
-)
-D("csakventillatorok.com", REG_CHANGEME,
+);
+D("csakventillatorok.com", REG_MONITOR,
         DnsProvider(hedns),
         TXT('reszelo', 'vesztettem'),
         TXT('tulajdonos', 'tormakris')
-)
+);
