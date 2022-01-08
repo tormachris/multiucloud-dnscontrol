@@ -4,8 +4,8 @@ type: docker
 name: default
 
 environment:
-  CREDS_JSON:
-    from_secret: CREDS_JSON
+  teszt:
+    from_secret: teszt
   HE_USERNAME:
     from_secret: HE_USERNAME
   HE_PASSWORD:
@@ -21,7 +21,7 @@ steps:
 - name: Validate configuration and check changes
   image: stackexchange/dnscontrol
   commands:
-    - echo $CREDS_JSON > creds.json
+    - echo teszt
     - dnscontrol preview
 
 - name: Push new configuration to providers
