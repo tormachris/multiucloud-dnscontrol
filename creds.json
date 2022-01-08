@@ -7,8 +7,5 @@
   "cloudflare": {
     "apitoken": "$CF_APITOKEN",
     "accountid": "$CF_ACCOUNTID"
-  },
-  "digitalocean": {
-    "token": "$DO_TOKEN"
   }
 }
