@@ -27,5 +27,16 @@ steps:
 - name: Push new configuration to providers
   image: registry.kmlabz.com/stargate-cluster/dnscontrol-docker
   pull: always
+  environment:
+    HE_USERNAME:
+      from_secret: HE_USERNAME
+    HE_PASSWORD:
+      from_secret: HE_PASSWORD
+    HE_TOTPKEY:
+      from_secret: HE_TOTPKEY
+    CF_APITOKEN:
+      from_secret: CF_APITOKEN
+    CF_ACCOUNTID:
+      from_secret: CF_ACCOUNTID
   commands:
     - dnscontrol push
