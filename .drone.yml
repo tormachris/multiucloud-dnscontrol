@@ -4,24 +4,21 @@ type: docker
 name: default
 
 environment:
-  teszt:
-    from_secret: teszt
-  HE_USERNAME:
-    from_secret: HE_USERNAME
-  HE_PASSWORD:
-    from_secret: HE_PASSWORD
-  HE_TOTPKEY:
-    from_secret: HE_TOTPKEY
-  CF_APITOKEN:
-    from_secret: CF_APITOKEN
-  CF_ACCOUNTID:
-    from_secret: CF_ACCOUNTID
+  - HE_USERNAME:
+      from_secret: HE_USERNAME
+  - HE_PASSWORD:
+      from_secret: HE_PASSWORD
+  - HE_TOTPKEY:
+      from_secret: HE_TOTPKEY
+  - CF_APITOKEN:
+      from_secret: CF_APITOKEN
+  - CF_ACCOUNTID:
+      from_secret: CF_ACCOUNTID
 
 steps:
 - name: Validate configuration and check changes
   image: stackexchange/dnscontrol
   commands:
-    - echo $teszt
     - dnscontrol preview
 
 - name: Push new configuration to providers
