@@ -76,6 +76,7 @@ D("tormakristof.eu", REG_MONITOR,
         CNAME('ts', 'mckay.tormakristof.eu.'),
         CNAME('wac', 'mckay.tormakristof.eu.'),
         CNAME('www', 'tormakristof.eu.'),
+        CNAME('static', 'icy-island-08b7c5a03.1.azurestaticapps.net.'),
         MX('@', 10, 'tormakristof-eu.mail.protection.outlook.com.', TTL(60)),
         MX('@', 0, 'mail.tormakristof.eu.'),
         SRV('_sipfederationtls._tcp', 100, 1, 5061, 'sipfed.online.lync.com.'),
@@ -83,8 +84,7 @@ D("tormakristof.eu", REG_MONITOR,
         TXT('bixchange._domainkey', 'v=DKIM1; h=sha256; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7WOWjInFXAwoyf7/Ddlgs4Cwl/zxddOHcNez3DX61ZCCgTBOfuXo/PLzD1o6eq2g7M39D7OmPKuU5Ihl9hQcsgOIQr+RbtDyzKOCu0xuk+0pjKIp7/olJP3vZhBW3ySMtfky8BOcjzsb+UeHS09/Bt9RfS3qKb1opSfYTSncq69OzIC/oWTZjQ3mxfcBdF+hjxWFXo5/RFt9eEfZQef8x5Q7F9IbhE336UOVzwFTd//YfretCs2tRWk16WhOOC5MBWQRZxvIg3dDeAuoS93N7pSM3nkQzehoqhyZxeylFoA0B8r0cpMa4XaHO2N7n7Y0RrAApgWZohdgGiVk7xpHrwIDAQAB'),
         TXT('_dmarc', 'v=DMARC1; p=reject;'),
         TXT('@', 'google-site-verification=Y-vwKAKqpWiBNB7ETL6HweEmt2sE38kzEwm87t5rBAQ'),
-        TXT('@', 'v=spf1 mx include:spf.protection.outlook.com -all'),
-        TXT('@', 'gxqtglbm02f20xd17261ld0d3dpjw739')
+        TXT('@', 'v=spf1 mx include:spf.protection.outlook.com -all')
 );
 D("torma.xyz", REG_MONITOR,
         DnsProvider(hedns),
