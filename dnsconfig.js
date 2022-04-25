@@ -1,6 +1,5 @@
 var cloudflare = NewDnsProvider("cloudflare", "CLOUDFLAREAPI");
-var REG_MONITOR = NewRegistrar('DNS-over-HTTPS', 'DNSOVERHTTPS');
-D("kmlabz.com", REG_MONITOR,
+D("kmlabz.com",
         DnsProvider(cloudflare),
         A('git', '152.66.211.211'),
         A('@', '152.66.211.211'),
@@ -18,7 +17,7 @@ D("kmlabz.com", REG_MONITOR,
         TXT('@', 'v=spf1 include:u3682008.wl009.sendgrid.net -all', TTL(3600)),
         TXT('_dmarc', 'v=DMARC1; p=reject; pct=25; rua=mailto:tormakristof@tormakristof.eu.;')
 );
-D("tormakristof.eu", REG_MONITOR,
+D("tormakristof.eu",
         DnsProvider(cloudflare),
         A('webgateway', '152.66.211.211'),
         A('mckay', '152.66.211.215'),
@@ -54,7 +53,7 @@ D("tormakristof.eu", REG_MONITOR,
         TXT('@', 'google-site-verification=Y-vwKAKqpWiBNB7ETL6HweEmt2sE38kzEwm87t5rBAQ'),
         TXT('@', 'v=spf1 mx include:spf.protection.outlook.com -all')
 );
-D("torma.xyz", REG_MONITOR,
+D("torma.xyz",
         DnsProvider(cloudflare),
         DefaultTTL(3600),
         A('@', '152.66.211.211', TTL(300)),
@@ -65,7 +64,7 @@ D("torma.xyz", REG_MONITOR,
         TXT('@', 'v=spf1 redirect=icloud.com'),
         TXT('@', 'apple-domain=h0Mjsp5TEdNbSNRa')
 );
-D("tormakris.dev", REG_MONITOR,
+D("tormakris.dev",
         DnsProvider(cloudflare),
         DefaultTTL(3600),
         A('@', '152.66.211.211', TTL(300)),
@@ -85,7 +84,7 @@ D("tormakris.dev", REG_MONITOR,
         TXT('@', 'google-site-verification=j5a9N2rIead4e3h5baJd1o3xrl7f5n_U82nDfgrZi9I', TTL(300)),
         TXT('_dmarc', 'v=DMARC1; p=reject;')
 );
-D("csakventillatorok.com", REG_MONITOR,
+D("csakventillatorok.com",
         DnsProvider(cloudflare),
         TXT('reszelo', 'vesztettem'),
         TXT('tulajdonos', 'tormakris')
