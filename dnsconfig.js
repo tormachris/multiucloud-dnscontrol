@@ -1,5 +1,6 @@
 var cloudflare = NewDnsProvider("cloudflare", "CLOUDFLAREAPI");
-D("kmlabz.com",
+var REG_NONE = NewRegistrar('none', 'NONE');
+D("kmlabz.com", REG_NONE,
         DnsProvider(cloudflare),
         A('git', '152.66.211.211'),
         A('@', '152.66.211.211'),
@@ -17,7 +18,7 @@ D("kmlabz.com",
         TXT('@', 'v=spf1 include:u3682008.wl009.sendgrid.net -all', TTL(3600)),
         TXT('_dmarc', 'v=DMARC1; p=reject; pct=25; rua=mailto:tormakristof@tormakristof.eu.;')
 );
-D("tormakristof.eu",
+D("tormakristof.eu", REG_NONE,
         DnsProvider(cloudflare),
         A('webgateway', '152.66.211.211'),
         A('mckay', '152.66.211.215'),
@@ -53,7 +54,7 @@ D("tormakristof.eu",
         TXT('@', 'google-site-verification=Y-vwKAKqpWiBNB7ETL6HweEmt2sE38kzEwm87t5rBAQ'),
         TXT('@', 'v=spf1 mx include:spf.protection.outlook.com -all')
 );
-D("torma.xyz",
+D("torma.xyz", REG_NONE,
         DnsProvider(cloudflare),
         DefaultTTL(3600),
         A('@', '152.66.211.211', TTL(300)),
@@ -64,7 +65,7 @@ D("torma.xyz",
         TXT('@', 'v=spf1 redirect=icloud.com'),
         TXT('@', 'apple-domain=h0Mjsp5TEdNbSNRa')
 );
-D("tormakris.dev",
+D("tormakris.dev", REG_NONE,
         DnsProvider(cloudflare),
         DefaultTTL(3600),
         A('@', '152.66.211.211', TTL(300)),
@@ -84,7 +85,7 @@ D("tormakris.dev",
         TXT('@', 'google-site-verification=j5a9N2rIead4e3h5baJd1o3xrl7f5n_U82nDfgrZi9I', TTL(300)),
         TXT('_dmarc', 'v=DMARC1; p=reject;')
 );
-D("csakventillatorok.com",
+D("csakventillatorok.com", REG_NONE,
         DnsProvider(cloudflare),
         TXT('reszelo', 'vesztettem'),
         TXT('tulajdonos', 'tormakris')
