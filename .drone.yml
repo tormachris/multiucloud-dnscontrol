@@ -16,5 +16,4 @@ steps:
     CF_ACCOUNTID:
       from_secret: CF_ACCOUNTID
   commands:
-    - sleep 60
     - dnscontrol push
