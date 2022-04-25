@@ -1,8 +1,7 @@
 var cloudflare = NewDnsProvider("cloudflare", "CLOUDFLAREAPI");
-var hedns = NewDnsProvider("hedns", "HEDNS");
 var REG_MONITOR = NewRegistrar('DNS-over-HTTPS', 'DNSOVERHTTPS');
 D("kmlabz.com", REG_MONITOR,
-        DnsProvider(hedns),
+        DnsProvider(cloudflare),
         A('git', '152.66.211.211'),
         A('@', '152.66.211.211'),
         AAAA('@', '2001:738:2001:207f:0:211:211:15'),
@@ -56,7 +55,7 @@ D("tormakristof.eu", REG_MONITOR,
         TXT('@', 'v=spf1 mx include:spf.protection.outlook.com -all')
 );
 D("torma.xyz", REG_MONITOR,
-        DnsProvider(hedns),
+        DnsProvider(cloudflare),
         DefaultTTL(3600),
         A('@', '152.66.211.211', TTL(300)),
         AAAA('@', '2001:738:2001:207f:0:211:211:15', TTL(300)),
@@ -67,7 +66,7 @@ D("torma.xyz", REG_MONITOR,
         TXT('@', 'apple-domain=h0Mjsp5TEdNbSNRa')
 );
 D("tormakris.dev", REG_MONITOR,
-        DnsProvider(hedns),
+        DnsProvider(cloudflare),
         DefaultTTL(3600),
         A('@', '152.66.211.211', TTL(300)),
         AAAA('@', '2001:738:2001:207f:0:211:211:15', TTL(300)),
@@ -87,7 +86,7 @@ D("tormakris.dev", REG_MONITOR,
         TXT('_dmarc', 'v=DMARC1; p=reject;')
 );
 D("csakventillatorok.com", REG_MONITOR,
-        DnsProvider(hedns),
+        DnsProvider(cloudflare),
         TXT('reszelo', 'vesztettem'),
         TXT('tulajdonos', 'tormakris')
 );
