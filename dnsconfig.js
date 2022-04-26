@@ -13,8 +13,11 @@ D("kmlabz.com", REG_NONE,
         CNAME('swagger', 'webgateway.tormakristof.eu.'),
         CNAME('www', 'webgateway.tormakristof.eu.'),
         CNAME('xwiki', 'webgateway.tormakristof.eu.'),
+        MX('@', 24, 'route1.mx.cloudflare.net.'),
+        MX('@', 51, 'route2.mx.cloudflare.net.'),
+        MX('@', 6, 'route3.mx.cloudflare.net.'),
         TXT('@', 'google-site-verification=cg0LE20BEX78s7fbbuYmDxslaHxJTVra5vBFehxsujk'),
-        TXT('@', 'v=spf1 include:u3682008.wl009.sendgrid.net -all', TTL(3600)),
+        TXT('@', 'v=spf1 include:_spf.mx.cloudflare.net -all', TTL(3600)),
         TXT('_dmarc', 'v=DMARC1; p=reject; pct=25; rua=mailto:tormakristof@tormakristof.eu.;')
 );
 D("tormakristof.eu", REG_NONE,
