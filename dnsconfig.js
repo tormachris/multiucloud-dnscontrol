@@ -13,7 +13,7 @@ D("kmlabz.com", REG_NONE,
         MX('@', 51, 'route2.mx.cloudflare.net.'),
         MX('@', 6, 'route3.mx.cloudflare.net.'),
         TXT('@', 'google-site-verification=cg0LE20BEX78s7fbbuYmDxslaHxJTVra5vBFehxsujk'),
-        TXT('@', 'v=spf1 include:_spf.mx.cloudflare.net -all', TTL(3600)),
+        TXT('@', 'v=spf1 include:_spf.mx.cloudflare.net -all'),
         TXT('_dmarc', 'v=DMARC1; p=reject; pct=25; rua=mailto:tormakristof@tormakristof.eu.;')
 );
 D("tormakristof.eu", REG_NONE,
@@ -94,7 +94,7 @@ D("tormakris.dev", REG_NONE,
         CNAME('certauth.fs','webgateway.tormakristof.eu.'),
         TXT('google._domainkey', ['v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArDLuWVTcV3GW+j2x1sImCeKuaVBmqa1UmG+ZCZU7wbSpkaRXQVITnFD3a974FipWRCwxJh1aJfkDHc3slXsv6MxmDCxIs1tMtfBihH8jGTQnUX3sqawHJSRHgQiAiASu13wYUUxcbV10xDRQICEH6BPuKqBvemWqYCWQqyhLYcx2GUfOUXOb0sJJV0bYyiGp4', 'wWBLWnj1WouvGlVWfalQnCjqyA9skctxpRvcxiQqRIBqYj6QG6sD+PFtDHJHnfdoWoqKeEW1t+TEM2mZWJviap0441sntn9UY7MBWIVz150XMFnBxxrYxkJQGyXKswGk8xDdmak/F42RUpe5hHn+wIDAQAB']),
         TXT('@', 'v=spf1 include:_spf.google.com -all'),
-        TXT('@', 'google-site-verification=j5a9N2rIead4e3h5baJd1o3xrl7f5n_U82nDfgrZi9I', TTL(300)),
+        TXT('@', 'google-site-verification=j5a9N2rIead4e3h5baJd1o3xrl7f5n_U82nDfgrZi9I'),
         TXT('@', 'MS=ms71551872'),
         TXT('_dmarc', 'v=DMARC1; p=reject;')
 );
