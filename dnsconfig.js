@@ -95,6 +95,7 @@ D("tormakris.dev", REG_NONE,
         TXT('google._domainkey', ['v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArDLuWVTcV3GW+j2x1sImCeKuaVBmqa1UmG+ZCZU7wbSpkaRXQVITnFD3a974FipWRCwxJh1aJfkDHc3slXsv6MxmDCxIs1tMtfBihH8jGTQnUX3sqawHJSRHgQiAiASu13wYUUxcbV10xDRQICEH6BPuKqBvemWqYCWQqyhLYcx2GUfOUXOb0sJJV0bYyiGp4', 'wWBLWnj1WouvGlVWfalQnCjqyA9skctxpRvcxiQqRIBqYj6QG6sD+PFtDHJHnfdoWoqKeEW1t+TEM2mZWJviap0441sntn9UY7MBWIVz150XMFnBxxrYxkJQGyXKswGk8xDdmak/F42RUpe5hHn+wIDAQAB']),
         TXT('@', 'v=spf1 include:_spf.google.com -all'),
         TXT('@', 'google-site-verification=j5a9N2rIead4e3h5baJd1o3xrl7f5n_U82nDfgrZi9I', TTL(300)),
+        TXT('@', 'MS=ms71551872'),
         TXT('_dmarc', 'v=DMARC1; p=reject;')
 );
 D("csakventillatorok.com", REG_NONE,
