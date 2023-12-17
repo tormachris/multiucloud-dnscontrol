@@ -93,7 +93,7 @@ D("tormakris.dev", REG_NONE,
         CNAME('enterpriseenrollment','enterpriseenrollment.manage.microsoft.com.'),
         CNAME('selector1._domainkey','selector1-tormakris-dev._domainkey.tormakristof.onmicrosoft.com.'),
         CNAME('selector2._domainkey','selector2-tormakris-dev._domainkey.tormakristof.onmicrosoft.com.'),
-        TXT('@', 'v=spf1 include:spf.protection.outlook.com -all'),
+        TXT('@', 'v=spf1 ip4:152.66.211.42 include:spf.protection.outlook.com -all'),
         TXT('@', 'google-site-verification=j5a9N2rIead4e3h5baJd1o3xrl7f5n_U82nDfgrZi9I'),
         TXT('@', 'MS=ms71551872'),
         TXT('_dmarc', 'v=DMARC1; p=reject;')
