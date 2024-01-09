@@ -13,7 +13,7 @@ D("kmlabz.com", REG_NONE,
         MX('@', 6, 'route3.mx.cloudflare.net.'),
         TXT('@', 'google-site-verification=cg0LE20BEX78s7fbbuYmDxslaHxJTVra5vBFehxsujk'),
         TXT('@', 'v=spf1 include:_spf.mx.cloudflare.net -all'),
-        TXT('_dmarc', 'v=DMARC1; p=reject; pct=25; rua=mailto:tormakristof@tormakristof.eu.; ruf=mailto:tormakristof@tormakristof.eu.;')
+        TXT('_dmarc', 'v=DMARC1; p=reject;')
 );
 D("tormakristof.eu", REG_NONE,
         DnsProvider(cloudflare),
@@ -66,6 +66,7 @@ D("tormakristof.eu", REG_NONE,
         CNAME('selector2._domainkey.groups','selector2-groups-tormakristof-eu._domainkey.tormakristof.onmicrosoft.com.'),
         MX('@', 0, 'tormakristof-eu.mail.protection.outlook.com.'),
         MX('groups', 0, 'groups-tormakristof-eu.mail.protection.outlook.com.'),
+        TXT('_dmarc.groups', 'v=DMARC1; p=reject;'),
         TXT('_atproto', 'did=did:plc:esnvw2g6e3lpx6hr7dmpkcy6'),
         TXT('_dmarc', 'v=DMARC1; p=reject;'),
         TXT('@', 'google-site-verification=Y-vwKAKqpWiBNB7ETL6HweEmt2sE38kzEwm87t5rBAQ'),
