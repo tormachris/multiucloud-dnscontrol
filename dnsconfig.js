@@ -1,6 +1,8 @@
-var cloudflare = NewDnsProvider("cloudflare");
-var REG_NONE = NewRegistrar('none');
-D("kmlabz.com", REG_NONE,
+var cloudflare = NewDnsProvider('cloudflare');
+var REG_MONITOR = NewRegistrar('doh');
+D("kmlabz.com", REG_MONITOR,
+        NAMESERVER('emma.ns.cloudflare.com.'),
+        NAMESERVER('art.ns.cloudflare.com.'),
         DnsProvider(cloudflare),
         A('git', '152.66.211.42'),
         A('@', '192.0.2.1', CF_PROXY_ON),
@@ -15,7 +17,9 @@ D("kmlabz.com", REG_NONE,
         TXT('@', 'v=spf1 include:_spf.mx.cloudflare.net -all'),
         TXT('_dmarc', 'v=DMARC1; p=reject;')
 );
-D("tormakristof.eu", REG_NONE,
+D("tormakristof.eu", REG_MONITOR,
+        NAMESERVER('emma.ns.cloudflare.com.'),
+        NAMESERVER('art.ns.cloudflare.com.'),
         DnsProvider(cloudflare),
         A('webgateway', '152.66.211.42'),
         A('mckay', '152.66.211.215'),
@@ -74,9 +78,10 @@ D("tormakristof.eu", REG_NONE,
         TXT('@', 'v=spf1 include:spf.protection.outlook.com -all'),
         TXT('groups', 'v=spf1 include:spf.protection.outlook.com -all')
 );
-D("torma.xyz", REG_NONE,
+D("torma.xyz", REG_MONITOR,
+        NAMESERVER('emma.ns.cloudflare.com.'),
+        NAMESERVER('art.ns.cloudflare.com.'),
         DnsProvider(cloudflare),
-        DefaultTTL(3600),
         A('@', '192.0.2.1', CF_PROXY_ON),
         MX('@', 10, 'mx01.mail.icloud.com.'),
         MX('@', 10, 'mx02.mail.icloud.com.'),
@@ -85,9 +90,10 @@ D("torma.xyz", REG_NONE,
         TXT('@', 'v=spf1 redirect=icloud.com'),
         TXT('@', 'apple-domain=h0Mjsp5TEdNbSNRa')
 );
-D("tormakris.dev", REG_NONE,
+D("tormakris.dev", REG_MONITOR,
+        NAMESERVER('emma.ns.cloudflare.com.'),
+        NAMESERVER('art.ns.cloudflare.com.'),
         DnsProvider(cloudflare),
-        DefaultTTL(3600),
         A('@', '192.0.2.1', CF_PROXY_ON),
         MX('@', 0, 'tormakris-dev.mail.protection.outlook.com.'),
         CNAME('autodiscover','autodiscover.outlook.com.'),
@@ -100,7 +106,9 @@ D("tormakris.dev", REG_NONE,
         TXT('@', 'MS=ms71551872'),
         TXT('_dmarc', 'v=DMARC1; p=reject;')
 );
-D("csakventillatorok.com", REG_NONE,
+D("csakventillatorok.com", REG_MONITOR,
+        NAMESERVER('emma.ns.cloudflare.com.'),
+        NAMESERVER('art.ns.cloudflare.com.'),
         DnsProvider(cloudflare),
         TXT('reszelo', 'vesztettem'),
         TXT('tulajdonos', 'tormakris')
