@@ -1,15 +1,11 @@
 {
-  "hedns":{
-    "username": "$HE_USERNAME",
-    "password": "$HE_PASSWORD",
-    "totp-key": "$HE_TOTPKEY"
-  },
   "cloudflare": {
     "TYPE": "CLOUDFLAREAPI",
     "apitoken": "$CF_APITOKEN",
     "accountid": "$CF_ACCOUNTID"
   },
-  "DNS-over-HTTPS": {
+  "doh": {
+    "TYPE": "DNSOVERHTTPS",
     "host": "cloudflare-dns.com"
   }
 }
