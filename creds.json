@@ -3,9 +3,5 @@
     "TYPE": "CLOUDFLAREAPI",
     "apitoken": "$CF_APITOKEN",
     "accountid": "$CF_ACCOUNTID"
-  },
-  "doh": {
-    "TYPE": "DNSOVERHTTPS",
-    "host": "cloudflare-dns.com"
   }
 }
