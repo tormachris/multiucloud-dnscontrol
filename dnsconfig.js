@@ -1,5 +1,5 @@
-var cloudflare = NewDnsProvider("cloudflare", "CLOUDFLAREAPI");
-var REG_NONE = NewRegistrar('none', 'NONE');
+var cloudflare = NewDnsProvider("cloudflare");
+var REG_NONE = NewRegistrar('none');
 D("kmlabz.com", REG_NONE,
         DnsProvider(cloudflare),
         A('git', '152.66.211.42'),
