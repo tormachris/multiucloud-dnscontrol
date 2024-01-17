@@ -5,6 +5,7 @@
     "totp-key": "$HE_TOTPKEY"
   },
   "cloudflare": {
+    "TYPE": "CLOUDFLAREAPI",
     "apitoken": "$CF_APITOKEN",
     "accountid": "$CF_ACCOUNTID"
   },
